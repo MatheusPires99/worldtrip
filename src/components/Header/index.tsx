@@ -1,7 +1,9 @@
 import Link from 'next/link';
 
-import { Box, Flex, Icon, Image, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, Icon, Image, Link as ChakraLink } from '@chakra-ui/react';
 import { MdChevronLeft } from 'react-icons/md';
+
+import { Container } from '../Container';
 
 type HeaderProps = {
   goBackHref?: string;
@@ -9,14 +11,11 @@ type HeaderProps = {
 
 export function Header({ goBackHref = null }: HeaderProps) {
   return (
-    <Flex
+    <Container
       as="header"
       bg="gray.50"
-      w="100%"
-      maxWidth={1160}
-      h={100}
-      mx="auto"
       px="6"
+      h={100}
       align="center"
       justify={goBackHref ? 'space-between' : 'center'}
     >
@@ -31,6 +30,6 @@ export function Header({ goBackHref = null }: HeaderProps) {
       <Image src="images/logo.svg" alt="World Trip" />
 
       {!!goBackHref && <Box w="8" h="8" />}
-    </Flex>
+    </Container>
   );
 }

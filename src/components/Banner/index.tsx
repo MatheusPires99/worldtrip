@@ -1,5 +1,7 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
+import { Container } from '../Container';
+
 export function Banner() {
   return (
     <Box
@@ -7,14 +9,7 @@ export function Banner() {
       bgRepeat="no-repeat"
       bgSize="100%"
     >
-      <Flex
-        w="100%"
-        maxWidth={1160}
-        h={335}
-        mx="auto"
-        align="center"
-        justify="space-between"
-      >
+      <Container h={335} align="center" justify="space-between">
         <Flex flexDir="column" maxWidth={524}>
           <Heading color="gray.50" fontWeight="medium">
             5 Continentes, <br /> infinitas possibilidades.
@@ -25,7 +20,7 @@ export function Banner() {
         </Flex>
 
         <Image src="/images/airplane.svg" alt="Airplane" mt="32" />
-      </Flex>
+      </Container>
     </Box>
   );
 }
