@@ -1,4 +1,4 @@
-export { Container } from './Container';
+export { Wrapper } from './Wrapper';
 export { Header } from './Header';
 export { Banner } from './Banner';
 export { TravelTypes } from './TravelTypes';
