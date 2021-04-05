@@ -1,4 +1,4 @@
-import { Box, Wrap } from '@chakra-ui/react';
+import { Box, Wrap, Divider } from '@chakra-ui/react';
 
 import { TRAVEL_TYPES } from '../../constants';
 import { Wrapper } from '../Wrapper';
@@ -17,12 +17,9 @@ export function TravelTypes() {
         ))}
       </Wrap>
 
-      <Box
-        alignSelf="center"
-        w={['60px', '90px']}
-        height={['1px', '2px']}
-        bg="teal.800"
-      />
+      <Box alignSelf="center" w={['60px', '90px']}>
+        <Divider color="teal" size="4rem" borderColor="teal.800" />
+      </Box>
     </Wrapper>
   );
 }
