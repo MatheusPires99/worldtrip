@@ -8,7 +8,7 @@ type WrapperProps = ChakraFlexProps & {
 
 export function Wrapper({ children, ...rest }: WrapperProps) {
   return (
-    <Flex w="100%" maxWidth={1160} mx="auto" {...rest}>
+    <Flex w="100%" maxWidth={1160} mx="auto" px="6" {...rest}>
       {children}
     </Flex>
   );

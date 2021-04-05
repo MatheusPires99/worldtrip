@@ -14,7 +14,6 @@ export function Header({ goBackHref = null }: HeaderProps) {
     <Wrapper
       as="header"
       bg="gray.50"
-      px="6"
       h={100}
       align="center"
       justify={goBackHref ? 'space-between' : 'center'}
