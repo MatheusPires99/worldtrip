@@ -14,6 +14,7 @@ export function BackgroundImage({ image, children }: BackgroundImageProps) {
       bgRepeat="no-repeat"
       bgSize="100%"
       bgPosition="center"
+      h={[150, 'auto']}
     >
       {children}
     </Box>

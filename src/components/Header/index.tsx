@@ -14,21 +14,21 @@ export function Header({ goBackHref = null }: HeaderProps) {
     <Wrapper
       as="header"
       bg="gray.50"
-      h={100}
+      h={[50, 100]}
       align="center"
       justify={goBackHref ? 'space-between' : 'center'}
     >
       {!!goBackHref && (
         <Link href={goBackHref} passHref>
-          <ChakraLink w="8" h="8" display="flex">
-            <Icon as={MdChevronLeft} fontSize="32" />
+          <ChakraLink w={['4', '8']} h={['4', '8']} display="flex">
+            <Icon as={MdChevronLeft} fontSize={['16', '32']} />
           </ChakraLink>
         </Link>
       )}
 
-      <Image src="images/logo.svg" alt="World Trip" />
+      <Image src="images/logo.svg" alt="World Trip" w={['80px', 'auto']} />
 
-      {!!goBackHref && <Box w="8" h="8" />}
+      {!!goBackHref && <Box w={['4', '8']} h={['4', '8']} />}
     </Wrapper>
   );
 }

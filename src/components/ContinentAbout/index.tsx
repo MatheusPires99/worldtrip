@@ -5,9 +5,9 @@ import { Info } from './Info';
 
 export function ContinentAbout() {
   return (
-    <Wrapper my="20">
-      <SimpleGrid align="center" gap="14" minChildWidth={500}>
-        <Text textAlign="left" fontSize="2xl">
+    <Wrapper my={['6', '20']}>
+      <SimpleGrid align="center" gap={['4', '14']} minChildWidth={[null, 500]}>
+        <Text textAlign="left" fontSize={['sm', '2xl']}>
           A Europa é, por convenção, um dos seis continentes do mundo.
           Compreendendo a península ocidental da Eurásia, a Europa geralmente
           divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
