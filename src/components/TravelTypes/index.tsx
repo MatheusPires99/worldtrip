@@ -2,7 +2,7 @@ import { Box, Wrap, Divider } from '@chakra-ui/react';
 
 import { TRAVEL_TYPES } from '../../constants';
 import { Wrapper } from '../Wrapper';
-import { Type } from './Type';
+import { Item } from './Item';
 
 export function TravelTypes() {
   return (
@@ -13,7 +13,7 @@ export function TravelTypes() {
         py={['9', '28']}
       >
         {TRAVEL_TYPES.map(type => (
-          <Type key={type.name} name={type.name} image={type.image} />
+          <Item key={type.name} name={type.name} image={type.image} />
         ))}
       </Wrap>
 

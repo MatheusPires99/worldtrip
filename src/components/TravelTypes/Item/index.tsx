@@ -1,11 +1,11 @@
 import { Box, Flex, Image, Text, useBreakpointValue } from '@chakra-ui/react';
 
-type TypeProps = {
+type ItemProps = {
   name: string;
   image: string;
 };
 
-export function Type({ name, image }: TypeProps) {
+export function Item({ name, image }: ItemProps) {
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
