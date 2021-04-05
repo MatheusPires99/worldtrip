@@ -1,6 +1,6 @@
 import { Flex, Image, Text } from '@chakra-ui/react';
 
-export function Card() {
+export function CityCard() {
   return (
     <Flex flexDir="column">
       <Image

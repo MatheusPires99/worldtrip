@@ -2,7 +2,7 @@
 import { Heading, SimpleGrid } from '@chakra-ui/react';
 
 import { Wrapper } from '../Wrapper';
-import { Card } from './Card';
+import { CityCard } from './CityCard';
 
 export function Gallery() {
   return (
@@ -13,7 +13,7 @@ export function Gallery() {
 
       <SimpleGrid minChildWidth="242px" gap={['5', '12']} px={['5', '0']}>
         {Array.from(Array(5).keys()).map((_, index) => (
-          <Card key={index} />
+          <CityCard key={index} />
         ))}
       </SimpleGrid>
     </Wrapper>
