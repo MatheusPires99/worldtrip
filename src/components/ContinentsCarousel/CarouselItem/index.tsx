@@ -31,16 +31,16 @@ export const CarouselItem = ({
           >
             <Heading
               color="gray.50"
-              fontSize={['xl', '3xl', '5xl']}
+              fontSize={['2xl', '5xl']}
               fontWeight="bold"
             >
               {title}
             </Heading>
             <Text
-              mt="1rem"
-              color="gray.200"
+              mt={['2', '4']}
+              color="gray.50"
               fontWeight="bold"
-              fontSize={['md', 'lg', 'xl', '1xl']}
+              fontSize={['md', 'xl']}
             >
               {subtitle}
             </Text>

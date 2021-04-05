@@ -10,8 +10,16 @@
   width: 16px;
   height: 16px;
   background: #999;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #ffba08;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
 }
