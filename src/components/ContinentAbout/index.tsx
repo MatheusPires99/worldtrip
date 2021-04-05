@@ -3,18 +3,34 @@ import { SimpleGrid, Text } from '@chakra-ui/react';
 import { Wrapper } from '../Wrapper';
 import { Info } from './Info';
 
-export function ContinentAbout() {
+export type Info = {
+  countries: number;
+  languages: number;
+  cities100: number;
+};
+
+type ContinentAboutProps = Info & {
+  text: string;
+};
+
+export function ContinentAbout({
+  text,
+  countries,
+  languages,
+  cities100,
+}: ContinentAboutProps) {
   return (
     <Wrapper my={['6', '20']}>
       <SimpleGrid align="center" gap={['4', '14']} minChildWidth={[null, 500]}>
         <Text textAlign="left" fontSize={['sm', '2xl']}>
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+          {text}
         </Text>
 
-        <Info />
+        <Info
+          countries={countries}
+          languages={languages}
+          cities100={cities100}
+        />
       </SimpleGrid>
     </Wrapper>
   );

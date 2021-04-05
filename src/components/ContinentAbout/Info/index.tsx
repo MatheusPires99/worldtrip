@@ -1,6 +1,8 @@
 import { Flex, Text } from '@chakra-ui/react';
 
-export function Info() {
+import { Info as InfoProps } from '..';
+
+export function Info({ countries, languages, cities100 }: InfoProps) {
   return (
     <Flex align="center" justify="space-between">
       <Flex flexDir="column" align={['flex-start', 'center']}>
@@ -9,7 +11,7 @@ export function Info() {
           fontWeight="semibold"
           fontSize={['2xl', '5xl']}
         >
-          50
+          {countries}
         </Text>
         <Text fontWeight={['medium', 'semibold']} fontSize={['md', '2xl']}>
           países
@@ -21,7 +23,7 @@ export function Info() {
           fontWeight="semibold"
           fontSize={['2xl', '5xl']}
         >
-          60
+          {languages}
         </Text>
         <Text fontWeight={['medium', 'semibold']} fontSize={['md', '2xl']}>
           línguas
@@ -33,7 +35,7 @@ export function Info() {
           fontWeight="semibold"
           fontSize={['2xl', '5xl']}
         >
-          27
+          {cities100}
         </Text>
         <Text fontWeight={['medium', 'semibold']} fontSize={['md', '2xl']}>
           cidades +100

@@ -1,11 +1,19 @@
-import { Flex, Image, Text } from '@chakra-ui/react';
+import { Flex, Image, Text, Box } from '@chakra-ui/react';
+import { CircleFlag } from 'react-circle-flags';
 
-export function CityCard() {
+type CityCardProps = {
+  name: string;
+  image: string;
+  country: string;
+  countryCode: string;
+};
+
+export function CityCard({ name, image, country, countryCode }: CityCardProps) {
   return (
     <Flex flexDir="column">
       <Image
-        src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-        alt=""
+        src={image}
+        alt={name}
         h={173}
         objectFit="cover"
         borderTopRightRadius="4"
@@ -25,20 +33,16 @@ export function CityCard() {
       >
         <Flex flexDir="column" align="flex-start">
           <Text fontWeight="semibold" fontSize="xl">
-            Londres
+            {name}
           </Text>
           <Text mt="3" fontWeight="medium" color="gray.400">
-            Reino Unido
+            {country}
           </Text>
         </Flex>
 
-        <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_the_United_Kingdom_%282-3%29.svg/1280px-Flag_of_the_United_Kingdom_%282-3%29.svg.png"
-          alt=""
-          objectFit="cover"
-          borderRadius="full"
-          boxSize="8"
-        />
+        <Box w="8" h="8">
+          <CircleFlag countryCode={countryCode} />
+        </Box>
       </Flex>
     </Flex>
   );

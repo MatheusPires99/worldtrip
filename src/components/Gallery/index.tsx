@@ -1,10 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 import { Heading, SimpleGrid } from '@chakra-ui/react';
 
+import { City } from '../../types';
 import { Wrapper } from '../Wrapper';
 import { CityCard } from './CityCard';
 
-export function Gallery() {
+type GalleryProps = {
+  cities: City[];
+};
+
+export function Gallery({ cities }: GalleryProps) {
   return (
     <Wrapper flexDir="column">
       <Heading mb={['5', '10']} fontWeight="medium" fontSize={['2xl', '4xl']}>
@@ -12,8 +17,14 @@ export function Gallery() {
       </Heading>
 
       <SimpleGrid minChildWidth="242px" gap={['5', '12']} px={['5', '0']}>
-        {Array.from(Array(5).keys()).map((_, index) => (
-          <CityCard key={index} />
+        {cities.map(city => (
+          <CityCard
+            key={city.id}
+            name={city.name}
+            image={city.image}
+            country={city.country}
+            countryCode={city.code}
+          />
         ))}
       </SimpleGrid>
     </Wrapper>

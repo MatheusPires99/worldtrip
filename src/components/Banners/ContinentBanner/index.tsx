@@ -2,9 +2,17 @@ import { Heading } from '@chakra-ui/react';
 
 import { Wrapper, BackgroundImage } from '../..';
 
-export function ContinentBanner() {
+type ContinentBannerProps = {
+  image: string;
+  continentName: string;
+};
+
+export function ContinentBanner({
+  image,
+  continentName,
+}: ContinentBannerProps) {
   return (
-    <BackgroundImage image="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
+    <BackgroundImage image={image}>
       <Wrapper
         h={['100%', 500]}
         align={['center', 'flex-end']}
@@ -16,7 +24,7 @@ export function ContinentBanner() {
           color="gray.50"
           mb={[0, '16']}
         >
-          Europa
+          {continentName}
         </Heading>
       </Wrapper>
     </BackgroundImage>

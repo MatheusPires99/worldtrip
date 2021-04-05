@@ -1,9 +1,14 @@
 import { Heading } from '@chakra-ui/react';
 
+import { Continent } from '../../types';
 import { Wrapper } from '../Wrapper';
 import { Carousel } from './Carousel';
 
-export function ContinentsCarousel() {
+type ContinentsCarouselProps = {
+  continents: Continent[];
+};
+
+export function ContinentsCarousel({ continents }: ContinentsCarouselProps) {
   return (
     <Wrapper mt="14" justify="center" flexDir="column">
       <Heading
@@ -15,7 +20,7 @@ export function ContinentsCarousel() {
         Vamos nessa? <br /> Então escolha seu continente
       </Heading>
 
-      <Carousel />
+      <Carousel continents={continents} />
     </Wrapper>
   );
 }
