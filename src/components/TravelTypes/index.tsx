@@ -1,23 +1,28 @@
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Wrap } from '@chakra-ui/react';
 
 import { TRAVEL_TYPES } from '../../constants';
 import { Wrapper } from '../Wrapper';
+import { Type } from './Type';
 
 export function TravelTypes() {
   return (
     <Wrapper flexDir="column">
-      <Flex align="center" justify="space-between" py="28">
+      <Wrap
+        align="center"
+        justify={['center', 'space-between']}
+        py={['9', '28']}
+      >
         {TRAVEL_TYPES.map(type => (
-          <Flex key={type.name} flexDir="column" align="center">
-            <Image src={type.image} alt={type.name} />
-            <Text mt="6" fontWeight="semibold" fontSize="2xl">
-              {type.name}
-            </Text>
-          </Flex>
+          <Type key={type.name} name={type.name} image={type.image} />
         ))}
-      </Flex>
+      </Wrap>
 
-      <Box alignSelf="center" w={90} height="2px" bg="teal.800" />
+      <Box
+        alignSelf="center"
+        w={['60px', '90px']}
+        height={['1px', '2px']}
+        bg="teal.800"
+      />
     </Wrapper>
   );
 }

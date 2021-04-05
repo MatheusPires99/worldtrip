@@ -12,9 +12,9 @@ export function BackgroundImage({ image, children }: BackgroundImageProps) {
     <Box
       bgImage={`url(${image})`}
       bgRepeat="no-repeat"
-      bgSize="100%"
+      bgSize={['auto', '100%']}
       bgPosition="center"
-      h={[150, 'auto']}
+      h={[155, 'auto']}
     >
       {children}
     </Box>
