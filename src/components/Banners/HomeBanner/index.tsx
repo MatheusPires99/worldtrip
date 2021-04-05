@@ -1,14 +1,10 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Flex, Heading, Image, Text } from '@chakra-ui/react';
 
-import { Wrapper } from '../Wrapper';
+import { Wrapper, BackgroundImage } from '../..';
 
-export function Banner() {
+export function HomeBanner() {
   return (
-    <Box
-      bgImage="url('/images/sky_background.png')"
-      bgRepeat="no-repeat"
-      bgSize="100%"
-    >
+    <BackgroundImage image="/images/sky_background.png">
       <Wrapper h={335} align="center" justify="space-between">
         <Flex flexDir="column" maxWidth={524}>
           <Heading color="gray.50" fontWeight="medium">
@@ -21,6 +17,6 @@ export function Banner() {
 
         <Image src="/images/airplane.svg" alt="Airplane" mt="32" />
       </Wrapper>
-    </Box>
+    </BackgroundImage>
   );
 }

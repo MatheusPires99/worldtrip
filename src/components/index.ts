@@ -1,4 +1,6 @@
 export { Wrapper } from './Wrapper';
+export { BackgroundImage } from './BackgroundImage';
 export { Header } from './Header';
-export { Banner } from './Banner';
+export { HomeBanner, ContinentBanner } from './Banners';
 export { TravelTypes } from './TravelTypes';
+export { ContinentAbout } from './ContinentAbout';
